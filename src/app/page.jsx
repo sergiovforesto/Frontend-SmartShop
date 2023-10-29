@@ -8,9 +8,11 @@ export default async function Home() {
   
   return (
     <>
-      <Nav/>  
+      <header className="sticky">
+        <Nav/>  
+      </header>
 
-        <main className="h-screen mt-20">
+        <main className="h-screen">
 
           <section >
             <p>primera section</p>

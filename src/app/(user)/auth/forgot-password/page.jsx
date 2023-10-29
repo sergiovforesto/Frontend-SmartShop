@@ -89,8 +89,7 @@ export default function ForgotPassword() {
               type="submit"
               className="flex justify-center items-center gap-1 text-white text-sm font-medium cursor-pointer bg-primary hover:bg-blue-600 rounded p-2 mt-2"
             >
-              Send email
-
+            
               <div>
                 {loading ? (
                   <Image
@@ -101,7 +100,7 @@ export default function ForgotPassword() {
                       className="animate-spin"
                   />
                 ): (
-                  ''
+                  'Send email'
                 )}
               </div>
             </button>

@@ -7,9 +7,10 @@ const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
 
-
+    
     const [authenticated, setAuthenticated] = useState({})
     const [loading, setLoading] = useState(false)
+
 
     useEffect(() => {
 

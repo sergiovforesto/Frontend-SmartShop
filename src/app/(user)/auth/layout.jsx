@@ -1,5 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
+import {Home} from 'react-feather'
+
 export const metadata = {
   title: 'Shopsmart Auth',
   description: 'Authentication',
@@ -8,17 +10,15 @@ export const metadata = {
 export default function AuthLayout({ children }) {
     return (
       <>
-        <div className="flex justify-center items-center h-32">
-            <div className="w-11/12">
-              <Link href='/' className="text-gray-500 p-1 w-10 hover:text-primary rounded-full bg-slate-200 flex items-center justify-center"> 
-                <span className="material-symbols-outlined">
-                  home
-                </span>
-              </Link>
-            </div>
-        </div>
-        <main className="flex justify-center items-center p-3">
-        
+        <main className="flex flex-col justify-center items-center p-3 h-screen">
+          <div className="w-full h-20">
+              <div className=" pl-60">
+                <Link href='/' className="p-2 w-10 hover:text-primary rounded-full bg-slate-200 hover:bg-slate-300 flex items-center justify-center"> 
+                  <Home className="h-5 text-txt-5E"/>
+                </Link>
+              </div>
+          </div>
+
           <div className="max-w-xl bg-white shadow-xl rounded-xl">
             <Link href='/'>
               <Image

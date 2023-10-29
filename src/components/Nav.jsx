@@ -10,7 +10,7 @@ import Menu from "./Menu"
 import axiosInstance from "./axiosInstance"
 import useAuthContext from "@/app/hooks/useAuthContext"
 import Spinner from "./Spinner"
-
+import {Menu as MenuIcon, Search, User, LogOut} from 'react-feather'
 
 
 
@@ -75,26 +75,25 @@ export default function Nav() {
   return (
 
     <>  
-        <Menu 
-            open={open}
-            setOpen={setOpen}
-        />
+        <nav className="fixed z-10 w-full">
+            <Menu 
+                open={open}
+                setOpen={setOpen}
+            />
+        </nav>
         
-        <header className="bg-white px-2 md:px-8 py-3 flex justify-between items-center border top-0 fixed w-full ">
+        <header className="bg-white px-2 md:px-8 py-3 flex justify-between items-center shadow-sm sticky top-0 w-full">
             
             <div className="flex items-center md:gap-8 mr-4">
-                <div
+                <button
                     className="cursor-pointer"
+                    type="button"
                     onClick={() => setOpen(!open)}
                 >
-                    <Image 
-                        src="/bar-hamburguer.svg"
-                        width={35}
-                        height={30}
-                        alt="menu"
-                    />
                     
-                </div>
+                    <MenuIcon className="text-txt-5E"/>
+                    
+                </button>
                 <div className="hidden md:block">
                     <Link href='/' className="cursor-pointer">
                         <Image 
@@ -120,12 +119,7 @@ export default function Nav() {
                         type="button"
                         className=" border-l p-2 sm:p-3 hover:bg-slate-100"
                     >
-                        <Image 
-                            src="/search.svg"
-                            width={20}
-                            height={20}
-                            alt="search"
-                        />
+                        <Search className="h-4 text-txt-5E"/>
                     </button>
                 </div>
             </div>
@@ -136,14 +130,14 @@ export default function Nav() {
                         <>
                             <Link
                                 href='auth/login'
-                                className="hidden md:block border-2 border-solid border-primary rounded text-primary text-sm font-semibold px-3 md:px-4 py-1"
+                                className="hidden md:block border-2 border-solid border-primary rounded text-primary hover:border-blue-200 hover:bg-blue-200 hover:text-primary text-sm font-semibold px-3 md:px-4 py-1"
                             >
                                 Login
                             </Link>
 
                             <Link
                                 href='auth'
-                                className="hidden md:block border-2 border-solid border-primary rounded text-white bg-primary font-semibold text-sm px-3 md:px-4 py-1"
+                                className="hidden md:block border-2 border-solid border-primary rounded text-white bg-primary hover:bg-blue-600 hover:border-blue-600 font-semibold text-sm px-3 md:px-4 py-1"
                             >
                                 Register
                             </Link>
@@ -172,14 +166,9 @@ export default function Nav() {
                     </div>
 
                     <div>
-                        <div className="border-2 border-neutral-300 bg-slate-200 p-2 rounded-full">
+                        <div className="border-2 border-neutral-300 bg-slate-200 p-2 rounded-full hover:bg-slate-300">
                             {!user.name ? (
-                                <Image
-                                    src="/user.svg"
-                                    width={15}
-                                    height={15}
-                                    alt="user"
-                                />
+                                <User className="sm:h-5 sm:w-5 text-gray-500"/>
                             ) : (
                                 <div className="px-1 rounded-full relative">
                                     <button 
@@ -205,9 +194,7 @@ export default function Nav() {
                                                 >   
                                                     {loading && <Spinner/>}
                                                     Sign out
-                                                    <span className="material-symbols-outlined">
-                                                        logout
-                                                    </span>
+                                                    <LogOut className="h-4"/>
                                                 </button>
                                             </li>
                                         </ul>

@@ -183,21 +183,20 @@ export default function Register() {
               type="submit"
               className="flex justify-center items-center gap-1 text-white text-sm font-medium cursor-pointer bg-primary hover:bg-blue-600 rounded p-2 mt-2"
             >
-                Register
 
-                <div>
-                  {loading ? (
-                    <Image
-                        src="/spinner.svg"
-                        width={18}
-                        height={15}
-                        alt="vector"
-                        className="animate-spin"
-                    />
-                  ): (
-                    ''
-                  )}
-                </div>
+              <div>
+                {loading ? (
+                  <Image
+                      src="/spinner.svg"
+                      width={18}
+                      height={15}
+                      alt="vector"
+                      className="animate-spin"
+                  />
+                ): (
+                  'Register'
+                )}
+              </div>
             </button>
             
           </form>

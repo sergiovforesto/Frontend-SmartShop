@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         'primary': '#1574FF',
         'secundary': '#7218F7',
-        'fondo': '#fcfcfc',
+        'fondo': '#FCFCFC',
         'letter': '#444444',
         'letter-2': '#383838',
         'success': '#3DD697',
@@ -19,7 +19,8 @@ module.exports = {
         'bg-footer': '#F4F6F9',
         'gray-footer': '#8E8E8E',
         'fondo-list': '#F1F7FF',
-        'black-26': '#262626'
+        'black-26': '#262626',
+        'txt-5E': '#5E5E5E'
         
       },
 

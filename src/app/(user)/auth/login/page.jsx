@@ -53,7 +53,7 @@ export default function Login() {
 
     } catch (error) {
       showAlert({
-        msg: error.response.data.msg,
+        message: error.response.data.msg,
         error: true
       })
     }
@@ -98,7 +98,7 @@ export default function Login() {
             type="submit"
             className="flex justify-center items-center gap-1 text-white text-sm font-medium cursor-pointer bg-primary hover:bg-blue-600 rounded p-2 mt-2"
           >
-            Sign In
+            
             <div>
               {loading ? (
                 <Image
@@ -109,7 +109,7 @@ export default function Login() {
                   className="animate-spin"
                 />
               ): (
-                ''
+                'Sign In'
               )}
             </div>
 

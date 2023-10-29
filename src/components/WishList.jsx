@@ -1,5 +1,4 @@
-import Image from "next/image"
-
+import { Heart } from "react-feather"
 export default function WishList() {
   return (
     <button 
@@ -8,12 +7,7 @@ export default function WishList() {
         className="flex items-center"
     >
         <span className="text-micro absolute right-0 top-0 bg-success text-white rounded-full px-1 py-mini">1</span>
-        <Image
-          src="/heart.svg"
-          width={24}
-          height={24}
-          alt="wishlist"
-        />
+        <Heart className="text-txt-5E w-6"/>
     </button>
   )
 }
