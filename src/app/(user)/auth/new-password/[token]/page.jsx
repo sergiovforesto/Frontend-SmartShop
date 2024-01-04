@@ -39,7 +39,7 @@ export default function NewPassword({params : {token}}) {
 
         const validToken = async () => {
             try {
-                await axiosInstance(`users/forgot-password/${token}`)
+                await axiosInstance(`/users/forgot-password/${token}`)
                 setValidToken(true)
 
             } catch (error) {

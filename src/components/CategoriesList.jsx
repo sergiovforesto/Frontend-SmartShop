@@ -7,64 +7,64 @@ export default function Categories() {
   return (
     <>
       <div 
-        className="relative"
-        value={active}
-        onMouseEnter={() => setActive(true)}
+        className="relative cursor-pointer"
+        onClick={() => setActive(!active)}
       >
         <div 
           className="flex gap-1 text-txt-5E font-semibold"
         >
-          categories
-          <ChevronDown className="text-gray-500"/>
+          <span className="hover:text-letter">categories</span>
+          <ChevronDown className="text-gray-500 hover:text-letter"/>
         </div>
 
-        <div 
-          className="absolute -left-7 mt-4"
-        >
+
           <div 
-            className={`${active ? 'block shadow bg-white rounded-md py-4' : 'hidden'}`}
-            onMouseLeave={() => setActive(false)}
+            className={`${active ? 'absolute -left-7 mt-6 bg-white rounded-md shadow' : 'hidden'}`}
           >
-            <ul className="flex flex-col gap-2">
-              <li className="hover:bg-fondo-list w-32 rounded-sm hover:border-l-2 hover:border-primary px-6 py-1">
-                <Link 
-                  href="#"
-                  className="flex items-center text-letter-2 gap-2 hover:text-primary lowercase"
-                >
-                  Computer
+            <div 
+              className=""
+            >
+              <ul className="flex flex-col">
+                <li className="hover:bg-fondo-list w-[9rem] rounded-sm hover:border-l-2 hover:border-primary px-6 py-[6px]">
+                  <Link 
+                    href="#"
+                    className="flex items-center text-base text-letter-2 gap-2 hover:text-primary lowercase"
+                  >
+                    Computer
 
-                </Link>
-              </li>
+                  </Link>
+                </li>
 
-              <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-1">
-                <Link 
-                  href="#"
-                  className="flex items-center text-letter-2 gap-2 hover:text-primary lowercase"
-                >
-                  Mobile
-                </Link>
-              </li>
+                <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-[6px]">
+                  <Link 
+                    href="#"
+                    className="flex items-center text-base text-letter-2 gap-2 hover:text-primary lowercase"
+                  >
+                    Mobile
+                  </Link>
+                </li>
 
-              <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-1">
-                <Link 
-                  href="#"
-                  className="flex items-center text-letter-2 gap-2 hover:text-primary lowercase"
-                >
-                  Watch
-                </Link>
-              </li>
+                <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-[6px]">
+                  <Link 
+                    href="#"
+                    className="flex items-center text-base text-letter-2 gap-2 hover:text-primary lowercase"
+                  >
+                    Watch
+                  </Link>
+                </li>
 
-              <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-1">
-                <Link 
-                  href="#"
-                  className="flex items-center text-letter-2 gap-2 hover:text-primary lowercase"
-                >
-                  Gaming
-                </Link>
-              </li>
-            </ul>
+                <li className="hover:bg-fondo-list rounded-sm hover:border-l-2 hover:border-primary px-6 py-[6px]">
+                  <Link 
+                    href="#"
+                    className="flex items-center text-base text-letter-2 gap-2 hover:text-primary lowercase"
+                  >
+                    Gaming
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
+
       </div>
     </>
   )

@@ -5,9 +5,35 @@ module.exports = {
   ],
   theme: {
     extend: {
+      keyframes: {
+        bgBlack: {
+          '0%': { opacity: '0' },
+          '25%': { opacity: '0.3' },
+          '50%': { opacity: '0.5' },
+          '75%': { opacity: '0.7' },
+          '100%': { 
+            opacity: '1',
+          },
+        },
+
+
+        anchoW: {
+          '0%': { width: '0' },
+          '25%': { width: '25%' },
+          '50%': { width: '50%' },
+          '75%': { width: '75%' },
+          '100%': { width: '100' },
+        }
+      },
+      animation: {
+        'opacity-bgBlack': 'bgBlack 150ms',
+        'w-effect': 'anchoW 150ms',
+      },
+    
       colors: {
         'primary': '#1574FF',
         'secundary': '#7218F7',
+        'secundary-hover': '#6813E6',
         'fondo': '#FCFCFC',
         'letter': '#444444',
         'letter-2': '#383838',
@@ -20,7 +46,8 @@ module.exports = {
         'gray-footer': '#8E8E8E',
         'fondo-list': '#F1F7FF',
         'black-26': '#262626',
-        'txt-5E': '#5E5E5E'
+        'txt-5E': '#5E5E5E',
+        'bar-admin': '#2D404E'
         
       },
 

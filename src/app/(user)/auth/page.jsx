@@ -150,7 +150,7 @@ export default function Register() {
               placeholder="email" 
               className={`${error ? ' bg-bg-input border-2 rounded pl-2 text-sm h-8 border-rose-300' : 'bg-bg-input border-2 border-br-input rounded pl-2 text-sm h-8 outline-primary'}`}
               value={user.email}
-              onChange={e => setUser({...user, email: e.target.value})}    
+              onChange={e => setUser({...user, email: e.target.value.toLowerCase()})}    
             />
 
             <input 

@@ -1,6 +1,70 @@
+'use client'
+import { useState, useEffect } from "react"
+import axiosInstance from "@/components/axiosInstance"
 import Link from "next/link"
 
 export default function Admin() {
+  const [orders, setOrders] = useState(0)
+  const [users, setUsers] = useState(0)
+
+  useEffect(() => {
+    const getOrders = async() => {
+      const token = localStorage.getItem('token')
+      if(!token) {
+        setLoading(false)
+        return
+      }
+
+              
+      const axiosConfig = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        }
+      }
+
+      try {
+        const orders = await axiosInstance('/orders/admin', axiosConfig)
+        const objectOrder = orders.data?.quantityOrders
+        setOrders(objectOrder)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    getOrders()
+  }, [])
+
+  useEffect(() => {
+    const geCustomers = async() => {
+      const token = localStorage.getItem('token')
+      if(!token) {
+        setLoading(false)
+        return
+      }
+
+              
+      const axiosConfig = {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`
+        }
+      }
+
+      try {
+        const users = await axiosInstance('/users', axiosConfig)
+        const objectUser = users.data?.quantityUsers
+        setUsers(objectUser)
+      } catch (error) {
+        console.log(error)
+      }
+    }
+
+    geCustomers()
+  }, [])
+
+
+
   return (
     <>
       <div className="mb-5">
@@ -17,7 +81,7 @@ export default function Admin() {
               
               <div>
                 <div className="sm:text-center">
-                  <p className="text-white text-xl font-semibold">20</p>
+                  <p className="text-white text-xl font-semibold">{orders}</p>
                   <p className="text-white font-semibold text-base">completed</p>
                 </div>
               </div>
@@ -25,21 +89,6 @@ export default function Admin() {
             </div>
           </div>
 
-          <div className=" bg-indigo-600 rounded-md px-5 py-7 flex-1">
-            <div className="grid grid-cols-1 sm:grid-cols-2 items-center">
-              <div>
-                <p className="text-white sm:text-center font-semibold text-2xl">Sales</p>
-              </div>
-              
-              <div>
-                <div className="sm:text-center">
-                  <p className="text-white text-xl  font-semibold">$3.658</p>
-                  <p className="text-white font-semibold text-base">completed</p>
-                </div>
-              </div>
-              
-            </div>
-          </div>
 
 
           <div className=" bg-danger rounded-md px-5 py-7 flex-1">
@@ -50,7 +99,7 @@ export default function Admin() {
               
               <div>
                 <div className="sm:text-center">
-                  <p className="text-white text-xl font-semibold">20</p>
+                  <p className="text-white text-xl font-semibold">{users}</p>
                   <p className="text-white font-semibold text-base">New users</p>
                 </div>
               </div>

@@ -8,12 +8,12 @@ export default function Menu({open, setOpen}) {
   return (
     <>
     <div 
-        className={`${open ? 'sticky top-0 z-10 w-full h-screen ' : ' hidden'}`}
+        className={`${open ? 'sticky top-0 z-10 w-full h-screen' : ' hidden'}`}
     >
             <div 
-                className="bg-letter-2 bg-opacity-30"
+                className="bg-letter-2 bg-opacity-30 animate-opacity-bgBlack"
             >
-                <div className="bg-white max-w-xs h-screen rounded-r-lg shadow " >
+                <div className="bg-white max-w-xs h-screen rounded-r-lg shadow animate-w-effect" >
                     <div className="p-5">
                         <div className="mb-6">
                             <button 
@@ -22,7 +22,7 @@ export default function Menu({open, setOpen}) {
                                 onClick={() => setOpen(!open)}
                                 
                             >
-                                <X  className=" text-letter-2"/>
+                                <X  className=" text-txt-5E"/>
                             </button>
                         </div>
 
@@ -30,60 +30,52 @@ export default function Menu({open, setOpen}) {
                             <ul className="grid grid-cols-1 gap-3">
                                 <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
                                     <Link
-                                        href=''
+                                        href='/user'
                                         className="flex items-center gap-3" 
                                     >
-                                        <User className=""/>
+                                        <User/>
                                         <p className="font-semibold text-base">Account</p>
                                     </Link>
                                 </li>
 
                                 <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
                                     <Link
-                                        href=''
+                                        href='/user/shopping'
                                         className="flex items-center gap-3"
                                     >
-                                        <ShoppingBag className=""/>
+                                        <ShoppingBag/>
                                         <p className="font-semibold text-base">My shopping</p>
                                     </Link>
                                 </li>
 
                                 <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
                                     <Link
-                                        href=''
+                                        href='/user/cart'
                                         className="flex items-center gap-3"
                                     >
-                                        <ShoppingCart className=""/>
+                                        <ShoppingCart/>
                                         <p className="font-semibold text-base">Cart</p>
                                     </Link>
                                 </li>
 
-                                <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
-                                    <Link
-                                        href=''
-                                        className="flex items-center gap-3"
-                                    >
-                                        <Heart className=""/>
-                                        <p className="font-semibold text-base ">Wishlist</p>
-                                    </Link>
-                                </li>
+                                
 
                                 <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
                                     <Link
-                                        href=''
+                                        href='/user/payments'
                                         className="flex items-center gap-3"
                                     >
-                                        <CreditCard className=""/>
+                                        <CreditCard/>
                                         <p className="font-semibold text-base ">Payment Method</p>
                                     </Link>
                                 </li>
 
                                 <li className="mx-5 px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary text-txt-5E hover:text-primary">
                                     <Link
-                                        href=''
+                                        href='user/help'
                                         className="flex items-center gap-3"
                                     >
-                                        <HelpCircle className=""/>
+                                        <HelpCircle/>
                                         <p className="font-semibold text-base">Help</p>
                                     </Link>
                                 </li>
@@ -108,7 +100,7 @@ export default function Menu({open, setOpen}) {
                                     <li className="px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary">
                                         <Link
                                             href=''
-                                            className="hover:text-primary"
+                                            className="hover:text-primary text-txt-5E"
                                         >
                                             Computer
                                         </Link>
@@ -117,7 +109,7 @@ export default function Menu({open, setOpen}) {
                                     <li className="px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary">
                                         <Link
                                             href=''
-                                            className="hover:text-primary"
+                                            className="hover:text-primary text-txt-5E"
                                         >
                                             Mobile
                                         </Link>
@@ -126,7 +118,7 @@ export default function Menu({open, setOpen}) {
                                     <li className="px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary">
                                         <Link
                                             href=''
-                                            className="hover:text-primary"
+                                            className="hover:text-primary text-txt-5E"
                                         >
                                             Watch
                                         </Link>
@@ -135,7 +127,7 @@ export default function Menu({open, setOpen}) {
                                     <li className="px-2 py-1 rounded-r hover:bg-fondo-list hover:border-l-2 border-primary">
                                         <Link
                                             href=''
-                                            className="hover:text-primary"
+                                            className="hover:text-primary text-txt-5E"
                                         >
                                             Gaming
                                         </Link>

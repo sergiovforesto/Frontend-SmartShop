@@ -76,22 +76,22 @@ export default function AdminLayout({children}) {
 
   return (
     <>  
-        {isAdmin ? (
-            <div className="flex ">
-                <div className="sticky max-w-xs top-0 w-full">
-                    <MenuAdmin/>      
-                </div>
-
-                <div className="w-full px-10">
-                    <div className="py-10">
-                        {children}  
-                    </div> 
-                </div>
-            </div>
-        ): (
+        {!isAdmin ? (
             <div className=" h-screen flex justify-center items-center">
                 <div>
                     <h2 className="">{message && <Alert message={message} error={error}/>}</h2>
+                </div>
+            </div>
+        ): (
+            <div className="flex flex-col sm:flex-row ">
+                <div className="sm:sticky sm:max-w-xs top-0 w-full">
+                    <MenuAdmin/>      
+                </div>
+
+                <div className="w-full px-5 sm:px-10 ">
+                    <div className="py-5 sm:py-10 ">
+                        {children}  
+                    </div> 
                 </div>
             </div>
         )}
