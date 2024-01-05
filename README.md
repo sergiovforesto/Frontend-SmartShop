@@ -2,6 +2,7 @@
 
 ### Description:
 - This project is built with Next.js and Tailwind.css. It uses Axios for API requests.
+- Back-end repository: https://github.com/sergiovforesto/api-shopsmart-ecommerce/tree/main
 
 ### Preview Images:
 ![Screenshot 2024-01-04 011023](https://github.com/sergiovforesto/Frontend-SmartShop/assets/107615935/9afbe6c5-51ef-42c3-a61a-194b86843174)
