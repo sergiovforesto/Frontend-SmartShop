@@ -9,13 +9,6 @@
 ![Screenshot 2024-01-04 011404](https://github.com/sergiovforesto/Frontend-SmartShop/assets/107615935/5eb9f04e-c518-4c54-9090-f3b9d6d7cfcc)
 ![Screenshot 2024-01-04 010937](https://github.com/sergiovforesto/Frontend-SmartShop/assets/107615935/88e70b72-647c-405d-bc0e-279eebf45e4d)
 
-## Firts Steps
-1. Change values in the **.env** file with your data
-2. Go to mailtrap.io and create an account to get your credentials
-3. Then, put the values in the **.env** file
-![Screenshot 2024-01-04 051252](https://github.com/sergiovforesto/Frontend-SmartShop/assets/107615935/0f366e9a-6f41-43d8-8f39-ee3ff67783de)
-
-
 ## Getting Started
 
 ```bash
