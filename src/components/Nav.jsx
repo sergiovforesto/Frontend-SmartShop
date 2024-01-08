@@ -6,18 +6,23 @@ import Link from "next/link"
 import Cart from "./Cart"
 import Categories from "./CategoriesList"
 import Menu from "./Menu"
+import SearchInput from "./Search"
 import axiosInstance from "./axiosInstance"
 import useAuthContext from "@/app/hooks/useAuthContext"
 import useCartContext from "@/app/hooks/useCartContext"
+import useSearchContext from "@/app/hooks/useSearchContext"
 import Spinner from "./Spinner"
-import {Menu as MenuIcon, Search, User, LogOut, Settings} from 'react-feather'
+import {Menu as MenuIcon, User, LogOut, Settings} from 'react-feather'
 
 
 
 export default function Nav() {
+
+    
     const router = useRouter()
     const {cerrarSesionAuth} = useAuthContext()
     const {setCart} = useCartContext()
+    const {empty} = useSearchContext()
     const [loading, setLoading] = useState(false)
     const [user, setUser] = useState([])
     const [active, setActive] = useState(false)
@@ -113,20 +118,8 @@ export default function Nav() {
             
             {/*Search */}
             <div className="w-1/2 shrink md:w-1/3">
-                <div className="border-2 rounded flex">
-                    <input 
-                        type="text" 
-                        placeholder="Search product..."
-                        className=" outline-none w-full bg-bg-input text-sm pl-2"
-                        
-
-                    />
-                    <button 
-                        type="button"
-                        className=" border-l p-2 sm:p-3 hover:bg-slate-100"
-                    >
-                        <Search className="h-4 text-txt-5E"/>
-                    </button>
+                <div className={`${empty ? 'border-2 border-danger rounded flex' : 'border-2 rounded flex'}`}>
+                    <SearchInput />
                 </div>
             </div>
 
