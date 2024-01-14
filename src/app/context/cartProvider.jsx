@@ -14,19 +14,17 @@ const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     
-
-    if(quantity < 1) return setQuantity(1)
-
+    //cuando manejes state condicionalmente, usa el useEffect
     useEffect(() => {
-        if (typeof localStorage !== "undefined") {
-          setCart(JSON.parse(localStorage.getItem("products")) ?? []);
+        if (quantity < 1) {
+          setQuantity(1);
         }
-    }, []);
+    }, [quantity]);
 
     useEffect(() => {
-        localStorage.setItem('products', JSON.stringify(cart))
-        sessionStorage.setItem('SesionProducts', JSON.stringify(cart))
-    }, [cart])
+        localStorage.setItem("products", JSON.stringify(cart));
+    }, [cart]);
+
 
 
     //View Product
@@ -72,7 +70,6 @@ const CartProvider = ({children}) => {
     const addToCart = async(product) => {
 
         let fullName;
-
         const token = localStorage.getItem('token')
         if(!token) {
             alert('Please, register o login to buy')
@@ -126,13 +123,7 @@ const CartProvider = ({children}) => {
         setSubTotal(0)
         setTotal(0)
 
-        // new Promise((resolve) => {
-        //     setTimeout(() => {
-        //       resolve(
-        //         router.push('/user/cart')
-        //       )
-        //     }, 200)
-        // })
+        
     }
 
     

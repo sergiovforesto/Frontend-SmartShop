@@ -41,9 +41,8 @@ export default function UserConfig() {
     }
 
     getInformation()
-  }, [])
+  }, [router])
 
-  console.log(information)
   return (
     <>
       <div className="mb-5">
@@ -97,7 +96,7 @@ export default function UserConfig() {
                   alt="empty"
                   className="mb-2"
                 />
-                <p>It's empty</p>
+                <p>Empty</p>
               </div>
             )}
 

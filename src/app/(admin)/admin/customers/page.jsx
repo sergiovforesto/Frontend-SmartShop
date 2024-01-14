@@ -39,7 +39,7 @@ export default function Customers({searchParams}) {
       }
     }
     getUsers()
-  }, [])
+  }, [currentPage])
 
 
   return (

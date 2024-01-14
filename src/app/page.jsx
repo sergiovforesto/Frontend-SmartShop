@@ -8,7 +8,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { GetProducts } from "@/lib/dataProducts"
 
-export default async function Home() {
+export default function Home() {
 
   const [products, setProducts] = useState([])
   useEffect(() => {
@@ -42,7 +42,7 @@ export default async function Home() {
             <div className="flex justify-between gap-6">
               <div className="flex gap-6 items-center">
                 
-                <img src="/publicidad.png" className="w-[95px] h-[95px] md:w-[140px] md:h-[140px]"/>
+                <Image src="/publicidad.png" width={90} height={95} className="md:w-[140px] md:h-[140px]" alt="img"/>
 
                 <div className="flex flex-col justify-center gap-4">
 
@@ -57,7 +57,7 @@ export default async function Home() {
 
               </div>
 
-              <img src="/iphone-14.webp" className="w-[95px] h-[95px] md:w-[140px] md:h-[140px]"/>
+              <Image src="/iphone-14.webp" width={90} height={95} className="md:w-[140px] md:h-[140px]" alt="img2"/>
 
             </div>
           </div>

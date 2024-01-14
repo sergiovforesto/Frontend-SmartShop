@@ -36,7 +36,7 @@ export default function ConfirmToken({params: {token}}) {
       }
     }
     validToken()
-  },[])
+  },[token])
 
   
   const {message, error} = alert
@@ -60,7 +60,7 @@ export default function ConfirmToken({params: {token}}) {
             </Link>
           </div>
         ): (
-          <p className="mt-2 text-primary font-bold">Sorry Token don't valid</p>
+          <p className="mt-2 text-primary font-bold">Sorry Token dont valid</p>
         )}
 
       </div>

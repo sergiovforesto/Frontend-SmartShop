@@ -56,7 +56,7 @@ export default function UpdateProduct({params: {id}}) {
             }
         }
         getProduct()
-    },[])
+    },[id])
     
 
     const showAlert = (alert) => {

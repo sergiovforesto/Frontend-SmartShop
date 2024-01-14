@@ -49,7 +49,7 @@ export default function Features({id, features}) {
 
       {features?.length === 0 && (
         <div className="mt-4 border w-full h-11 md:w-[538px] rounded-xl flex justify-center items-center bg-gray-50 text-letter-2">
-          <p>This product don't have features</p>
+          <p>This product dont have features</p>
         </div>
       )}
       

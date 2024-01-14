@@ -7,7 +7,7 @@ import Link from "next/link"
 import axiosInstance from "@/components/axiosInstance"
 
 
-export default async function Products({searchParams}) {
+export default function Products({searchParams}) {
   
   const currentPage = Number(searchParams?.page) || 1;
   const [totalPages, setTotalPages] = useState(1)

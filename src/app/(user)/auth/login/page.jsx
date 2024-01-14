@@ -124,7 +124,7 @@ export default function Login() {
             href="/auth"
             className="underline text-xs font-light text-neutral-400"
           >
-            Don't you have an account? Register
+            Dont you have an account? Register
           </Link>
 
           <Link

@@ -30,7 +30,7 @@ export default function PurchaseSummary() {
       router.push('/')
       return
     }
-  }, [])
+  }, [router])
 
   useEffect(() => {
     const getShippingInfo = async() => {

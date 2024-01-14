@@ -42,7 +42,7 @@ export default function UserConfig() {
     }
 
     getInformation()
-  }, [])
+  }, [router])
 
   const showAlert = (alert) => {
         setAlert(alert)
@@ -122,7 +122,7 @@ export default function UserConfig() {
                   alt="empty"
                   className="mb-2"
                 />
-                <p>It's empty</p>
+                <p>Empty</p>
               </div>
             )}
 

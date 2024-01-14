@@ -39,7 +39,7 @@ export default function DeleteCollection({params: {id}}) {
             }
         }
         getCollection()
-    },[])
+    },[id])
 
     const showAlert = (alert) => {
         setAlerta(alert)

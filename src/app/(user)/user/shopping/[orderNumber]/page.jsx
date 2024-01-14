@@ -42,7 +42,7 @@ export default function MyOrderView({params: {orderNumber}}) {
         }
     
         getOrderNumber()
-    }, [])
+    }, [orderNumber])
 
 
   return (

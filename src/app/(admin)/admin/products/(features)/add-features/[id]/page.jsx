@@ -50,7 +50,7 @@ export default function AddFeatures({params: {id}}) {
       }
     }
     getProduct()
-  }, [])
+  }, [id])
 
   const showAlert = (alert) => {
     setAlert(alert)

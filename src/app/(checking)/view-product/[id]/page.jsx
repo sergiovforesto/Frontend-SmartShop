@@ -48,7 +48,7 @@ export default function ViewProduct({params: {id}}) {
             }
         }
         getProduct()
-    }, [])
+    }, [id])
 
        
 

@@ -22,6 +22,8 @@ export default function ShoppingCart() {
         return setCart(removeProduct)
     }
 
+    
+
     useEffect(() => {
         const verifyShippingInfo = async() => {
             const token = localStorage.getItem('token')
@@ -71,14 +73,16 @@ export default function ShoppingCart() {
         verifyPayment()
     }, [])
 
-    const handlePurchase = async() => {
+
+
+    const handlePurchase = () => {
         if(!hasInfomartion) {
-            await alert('Please, Add a Shipment information')
+             alert('Please, Add a Shipment information')
             return router.push('/user')
         }
 
         if(!hasPayment) {
-            await alert('Please, Add a Payment Method first')
+             alert('Please, Add a Payment Method first')
             return router.push('/user/payments')
         }
 

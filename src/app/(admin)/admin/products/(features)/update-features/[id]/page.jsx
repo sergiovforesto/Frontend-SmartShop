@@ -53,7 +53,7 @@ export default function UpdateFeatures({params: {id}}) {
             }
         }
         getProduct()
-    }, [])
+    }, [id])
 
     const showAlert = (alert) => {
         setAlert(alert)

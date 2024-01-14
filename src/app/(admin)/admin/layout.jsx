@@ -70,7 +70,7 @@ export default function AdminLayout({children}) {
         authUser()
 
         
-    }, [])
+    }, [setAuthenticated, router])
 
     const {message, error} = alert
 

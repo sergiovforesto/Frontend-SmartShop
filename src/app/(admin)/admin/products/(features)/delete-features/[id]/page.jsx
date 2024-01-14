@@ -42,7 +42,7 @@ export default function DeleteFeatures({params: {id}}) {
             }
         }
         getProduct()
-    }, [])
+    }, [id])
 
     const showAlert = (alert) => {
         setAlert(alert)

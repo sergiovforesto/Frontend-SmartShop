@@ -50,7 +50,7 @@ export default function DeleteProduct({params: {id}}) {
             }
         }
         getProduct()
-    },[])
+    },[id])
 
     const showAlert = (alert) => {
         setAlerta(alert)

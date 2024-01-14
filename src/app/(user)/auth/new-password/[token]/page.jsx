@@ -51,7 +51,7 @@ export default function NewPassword({params : {token}}) {
             }
         }
         validToken()
-    },[])
+    },[token])
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -143,7 +143,7 @@ export default function NewPassword({params : {token}}) {
                         href="/auth"
                         className="underline text-xs font-light text-neutral-400"
                         >
-                        Don't you have an account? Register
+                        Dont you have an account? Register
                     </Link>
 
                     <Link
@@ -157,7 +157,7 @@ export default function NewPassword({params : {token}}) {
             </div>
         ): (
             <div className="flex justify-center items-center mt-5">
-                <p className="text-danger font-bold">Token Doesn't exists</p>
+                <p className="text-danger font-bold">Token Doesn&apost exists</p>
             </div>
         )}
     </>

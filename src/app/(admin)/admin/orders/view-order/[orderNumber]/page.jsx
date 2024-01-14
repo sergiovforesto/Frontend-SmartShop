@@ -55,7 +55,7 @@ export default function ViewOrder({params: {orderNumber}}) {
         }
 
         getUserOrder()
-    }, [])
+    }, [orderNumber])
 
     const updateDeliveryDate = async() => {
         const token = localStorage.getItem('token')

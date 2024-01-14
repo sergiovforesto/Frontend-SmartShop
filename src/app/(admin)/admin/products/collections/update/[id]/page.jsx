@@ -42,7 +42,7 @@ export default function UpdateCollection({params: {id}}) {
             }
         }
         getCollection()
-    },[])
+    },[id])
 
     const showAlert = (alert) => {
         setAlert(alert)

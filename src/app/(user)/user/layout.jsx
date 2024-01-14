@@ -67,7 +67,7 @@ export default function UserLayout({children}) {
     authUser()
 
       
-  }, [])
+  }, [router, setAuthenticated])
 
   const {message, error} = alert
 

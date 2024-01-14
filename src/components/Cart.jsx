@@ -43,8 +43,9 @@ export default function Cart() {
               </div>
             )}
 
-            {cart?.map((product) => (
-              <Link 
+            {cart?.map((product, index) => (
+              <Link
+                key={index} 
                 href='/user/cart'
                 className="flex gap-2 items-center border-b w-full mb-4"
               >
